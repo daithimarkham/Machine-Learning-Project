@@ -1,4 +1,3 @@
-# Machine-Learning-Project
 # David Markham
 # Machine Learning & Statistics Project
 # G.M.I.T.
