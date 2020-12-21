@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENV FLASK_APP=name_of_file_here
+ENV FLASK_APP=name_of_file_here_goes_here
 
 CMD python -m flask run 
