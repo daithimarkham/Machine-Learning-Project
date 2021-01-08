@@ -13,17 +13,17 @@ https://nbviewer.jupyter.org/
 
 Create a web service that uses machine learning to make predictions based on the data set Power Production. The goal is to produce a model that accurately predicts wind turbine power output from wind speed values, as in the data set. You must then develop a web service that will respond with predicted power values based on speed values sent as HTTP requests.
 
-**Table of contents**
+### How to run it?
 
-Include Hyperlinks. 
+- Clone down this repository to your machine. 
+- You will need an Anaconda environment to run it. 
+- To see what packages you will need exactly, you can go to the requirements.txt file. 
+- If you follow the steps above, this will hopefully help you run the application.
+- Once you have all the steps done above, to run the application you can do the following. 
 
-- Dataset 
-- Jupyter Notebook
-- Python Script
-- Summary
-
-
-## Getting Started
+1. Run the powerServer.py file. 
+2. Then copy the http address which will be displayed in your terminal and paste in your browser.
+3. From here you run it, enter the wind speed, and an estimated power output will be displayed. 
 
 ### How to get started and run Jupyter Notebook.
 
@@ -54,9 +54,7 @@ For this project we will be using a Jupyter notebook to hold and display all our
 
 • Repository, ReadMe and Gitignore created.
 
-### How to run a Python Script (Include Hyperlinks)
 
-### How to run UP Flask for your virtual environment. 
 
-### Dockerfile
+
 
