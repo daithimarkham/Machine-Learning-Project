@@ -52,12 +52,22 @@
 
     <script>
         // Adapted from stack overflow posts.
-        $("#uniform-button").click(function(e) {
+        $("#kerasPredict").click(function(e) {
+            var wind = document.getElementById("userInput").value
+            if (wind.length == 0)
+            {
+              alert("Enter Wind Speed")
+            }
+            else
+            {
+              document.getElementById("userResult").value = "Please wait!"
             e.preventDefault();
-            $.getJSON("/api/uniform", function(data) {
-                $('#output').val(data.value);
-            });
+            $.getJSON("/api/kerasPrediction/" + wind, function(data){
+                $('#userResult').val('Wind speed of' + wind +', estimated power output: ' + data.value ); 
+              });
+            }
         });
+            
     </script>
   </body>
 </html>

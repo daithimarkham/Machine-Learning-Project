@@ -7,9 +7,7 @@
 
 # Flask for web app.
 import flask as fl
-# Numpy for numerical work.
-import numpy as np 
-from tensorflow import keras 
+from kerasmodel import KerasModel as km
 
 
 
@@ -25,10 +23,15 @@ def home(): # Index page
   return app.send_static_file('index.html')
 
 
-# Add normal route.
-@app.route('/api/normal') # gen random numbers centred around 0 minus or positive.
-def normal(): 
-  return {"value": np.random.normal()} # Return Numpy random normal number from Python Dictionary.s
+# Here we request from our model we previously created.
+@app.route('api/kerasPrediction/<string:wind>')
+def kerasModelPredict(wind): 
+    
+    # String must be converted to float as cannot pass natively
+    # Insight from https://github.com/pallets/flask/issues/315
+    wind = float(wind)
+    return km.kerasPrediction(wind)
+
 
 
 if __name__ == '__main__':
@@ -38,5 +41,6 @@ if __name__ == '__main__':
 # References
 # https://towardsdatascience.com/deploying-a-keras-deep-learning-model-as-a-web-application-in-p-fc0f2354a7ff 
 # https://www.tensorflow.org/guide/keras/save_and_serialize 
+# https://github.com/keras-team/keras-io/blob/master/guides/serialization_and_saving.py 
 # https://getbootstrap.com/
 # https://www.w3schools.com/html/ 
