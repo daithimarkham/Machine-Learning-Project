@@ -23,7 +23,7 @@ Create a web service that uses machine learning to make predictions based on the
 
 1. Run the powerServer.py file. 
 2. Then copy the http address which will be displayed in your terminal and paste in your browser.
-3. From here you run it, enter the wind speed, and an estimated power output will be displayed. 
+3. From here you run it, enter the wind speed, and an estimated power output will be displayed in the index.html file in the static folder.
 
 ### How to get started and run Jupyter Notebook.
 
